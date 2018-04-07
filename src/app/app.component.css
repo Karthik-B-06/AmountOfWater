@@ -1,0 +1,15 @@
+table, th, td {
+    border: 1px solid black;
+}
+  
+td,th {
+    padding: 10px 0;
+}
+
+.water {
+    background-color: blue;
+}
+
+.building {
+    background-color: yellow;
+}
