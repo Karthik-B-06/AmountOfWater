@@ -15,7 +15,9 @@ import { type } from 'os';
 
 
 export class AppComponent {
+  
   arrStr: Array<Object>;
+  errormessage: string = "none";
   row: number;
   title = 'app';
   Arr = Array;
@@ -25,6 +27,7 @@ export class AppComponent {
   totalAmount : number;
   show: boolean = false;
   inputArray(form: NgForm) {
+    this.errormessage = "none";
     var letters = new RegExp('[a-zA-Z]');
     console.log(letters.test(form.value.arrayValues.toString()));
     
@@ -62,6 +65,10 @@ export class AppComponent {
     }
     this.amount.push(0);
 
+    console.log(this.totalAmount);
+    if(isNaN(this.totalAmount)) {
+      alert("Input Entered Incorrectly");
+    }
     console.log(this.amount);
     }
 
